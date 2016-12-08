@@ -1,0 +1,32 @@
+{
+  "name": "meto",
+  "version": "0.0.0",
+  "description": "Standard conventional object meta description.",
+  "main": "meto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/meto.git"
+  },
+  "keywords": [
+    "object",
+    "meta",
+    "description",
+    "meto"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/meto/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/meto#readme",
+  "dependencies": {
+    "cemento": "^0.3.0",
+    "falzy": "^0.5.0",
+    "protype": "^0.4.0",
+    "truly": "^0.3.0",
+    "zelf": "^0.3.0"
+  }
+}
