@@ -1,6 +1,6 @@
 {
   "name": "meto",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Standard conventional object meta description.",
   "main": "meto.js",
   "support": "meto.support.js",
