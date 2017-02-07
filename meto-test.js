@@ -2,4 +2,5 @@
 
 const meto = require( "./meto.js" );
 
-console.log( meto( "name", { "name": "simple" } ) );
+console.log( require( "util" ).inspect( meto( "name", { "name": "simple" } ), { "showHidden":true } ) );
+console.log( meto( ) )
