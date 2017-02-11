@@ -1,6 +1,6 @@
 {
   "name": "meto",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Standard conventional object meta description.",
   "main": "meto.js",
   "support": "meto.support.js",
@@ -34,7 +34,7 @@
     "cemento": "^0.8.0",
     "falzy": "^0.11.0",
     "protype": "^0.15.0",
-    "truly": "^0.10.0",
+    "truly": "^0.11.0",
     "zelf": "^0.6.0"
   },
   "devDependencies": {
