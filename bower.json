@@ -1,6 +1,6 @@
 {
   "name": "meto",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Standard conventional object meta description.",
   "main": "meto.deploy.js",
   "authors": [
