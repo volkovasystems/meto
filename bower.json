@@ -1,8 +1,9 @@
 {
   "name": "meto",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Standard conventional object meta description.",
   "main": "meto.deploy.js",
+  "support": "meto.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
     "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
@@ -23,10 +24,10 @@
     "tests"
   ],
   "dependencies": {
-    "cemento": "^0.8.0",
-    "falzy": "^0.11.0",
-    "protype": "^0.15.0",
-    "truly": "^0.11.0",
-    "zelf": "^0.6.0"
+    "cemento": "^0.11.0",
+    "falzy": "^0.13.0",
+    "protype": "^0.17.0",
+    "truly": "^0.13.0",
+    "zelf": "^0.8.0"
   }
 }
