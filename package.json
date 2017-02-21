@@ -1,13 +1,13 @@
 {
   "name": "meto",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Standard conventional object meta description.",
   "main": "meto.js",
   "support": "meto.support.js",
   "deploy": "meto.deploy.js",
   "browser": "meto.deploy.js",
   "scripts": {
-    "build": "babel meto.js --out-file meto.support.js --source-maps && webpack --progress",
+    "build": "babel meto.js --out-file meto.support.js --source-maps && webpack --progress --display-modules",
     "test": "mocha meto-test.js"
   },
   "repository": {
