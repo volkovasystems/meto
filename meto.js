@@ -51,7 +51,7 @@
 			"cemento": "cemento",
 			"falzy": "falzy",
 			"protype": "protype",
-			"truly": "truly",
+			"wichevr": "wichevr",
 			"zelf": "zelf"
 		}
 	@end-include
@@ -60,7 +60,7 @@
 const cemento = require( "cemento" );
 const falzy = require( "falzy" );
 const protype = require( "protype" );
-const truly = require( "truly" );
+const wichevr = require( "wichevr" );
 const zelf = require( "zelf" );
 
 const meto = function meto( property, entity ){
@@ -77,12 +77,9 @@ const meto = function meto( property, entity ){
 		throw new Error( "invalid property" );
 	}
 
-	entity = entity || zelf( this );
+	entity = wichevr( entity, zelf( this ) );
 
-	let name = entity.name;
-	if( falzy( name ) && truly( entity.constructor ) && truly( entity.constructor.name ) ){
-		name = entity.constructor.name;
-	}
+	let name = wichevr( entity.name, entity.constructor.name );
 
 	let descriptor = Object.getOwnPropertyDescriptor( entity, property );
 
@@ -91,14 +88,17 @@ const meto = function meto( property, entity ){
 	return cemento( {
 		"name": name,
 		"entity": entity,
+
 		"property": property,
 		"type": protype( value ).type,
+
 		"descriptor": descriptor,
 		"enumerable": descriptor.enumerable,
 		"configurable": descriptor.configurable,
 		"writable": descriptor.writable,
 		"get": descriptor.get,
 		"set": descriptor.set,
+
 		"value": value
 	} );
 };

@@ -3,7 +3,7 @@ babel-runtime \
 cemento \
 falzy \
 protype \
-truly \
+wichevr \
 zelf \
 --save && \
 yarn add \
@@ -18,7 +18,7 @@ bower install \
 cemento \
 falzy \
 protype \
-truly \
+wichevr \
 zelf \
 --save \
 --force-latest

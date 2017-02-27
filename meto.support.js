@@ -51,7 +51,7 @@
                                                                                                                                                                                                                                                                                                   			"cemento": "cemento",
                                                                                                                                                                                                                                                                                                   			"falzy": "falzy",
                                                                                                                                                                                                                                                                                                   			"protype": "protype",
-                                                                                                                                                                                                                                                                                                  			"truly": "truly",
+                                                                                                                                                                                                                                                                                                  			"wichevr": "wichevr",
                                                                                                                                                                                                                                                                                                   			"zelf": "zelf"
                                                                                                                                                                                                                                                                                                   		}
                                                                                                                                                                                                                                                                                                   	@end-include
@@ -60,7 +60,7 @@
 var cemento = require("cemento");
 var falzy = require("falzy");
 var protype = require("protype");
-var truly = require("truly");
+var wichevr = require("wichevr");
 var zelf = require("zelf");
 
 var meto = function meto(property, entity) {
@@ -77,12 +77,9 @@ var meto = function meto(property, entity) {
 		throw new Error("invalid property");
 	}
 
-	entity = entity || zelf(this);
+	entity = wichevr(entity, zelf(this));
 
-	var name = entity.name;
-	if (falzy(name) && truly(entity.constructor) && truly(entity.constructor.name)) {
-		name = entity.constructor.name;
-	}
+	var name = wichevr(entity.name, entity.constructor.name);
 
 	var descriptor = (0, _getOwnPropertyDescriptor2.default)(entity, property);
 
@@ -91,14 +88,17 @@ var meto = function meto(property, entity) {
 	return cemento({
 		"name": name,
 		"entity": entity,
+
 		"property": property,
 		"type": protype(value).type,
+
 		"descriptor": descriptor,
 		"enumerable": descriptor.enumerable,
 		"configurable": descriptor.configurable,
 		"writable": descriptor.writable,
 		"get": descriptor.get,
 		"set": descriptor.set,
+
 		"value": value });
 
 };
