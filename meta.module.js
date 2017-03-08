@@ -1,5 +1,5 @@
 /*;
-	@module-license:
+	@submodule-license:
 		The MIT License (MIT)
 		@mit-license
 
@@ -23,13 +23,13 @@
 		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 		SOFTWARE.
-	@end-module-license
+	@end-submodule-license
 
-	@module-configuration:
+	@submodule-configuration:
 		{
 			"package": "meto",
-			"path": "meto/meto.js",
-			"file": "meto.js",
+			"path": "meto/meta.js",
+			"file": "meta.js",
 			"module": "meto",
 			"author": "Richeve S. Bebedor",
 			"contributors": [
@@ -40,64 +40,65 @@
 			"test": "meto-test.js",
 			"global": true
 		}
-	@end-module-configuration
+	@end-submodule-configuration
 
-	@module-documentation:
+	@submodule-documentation:
 		Standard conventional object meta description.
-	@end-module-documentation
+	@end-submodule-documentation
 
 	@include:
 		{
 			"cemento": "cemento",
-			"falzy": "falzy",
-			"protype": "protype",
-			"wichevr": "wichevr",
-			"zelf": "zelf"
+			"diatom": "diatom",
+			"protype": "protype"
 		}
 	@end-include
 */
 
-const falzy = require( "falzy" );
-const kein = require( "kein" );
+const cemento = require( "cemento" );
+const diatom = require( "diatom" );
 const protype = require( "protype" );
-const wichevr = require( "wichevr" );
-const zelf = require( "zelf" );
 
-const Meta = require( './meta.js' );
+const Meta = diatom( "Meta" );
 
-const meto = function meto( property, entity ){
-	/*;
-		@meta-configuration:
-			{
-				"property:required": [
-					"string"
-				],
-				"entity:required": "object"
-			}
-		@end-meta-configuration
-	*/
+Meta.prototype.initialize = function initialize( name, entity, property, descriptor, value ){
+	cemento( {
+		"name": name,
+		"entity": entity,
 
-	if( falzy( property ) || !protype( property, NUMBER + STRING + SYMBOL ) ){
-		throw new Error( "invalid property" );
-	}
+		"property": property,
+		"type": protype( value ).type,
 
-	entity = wichevr( entity, zelf( this ) );
+		"descriptor": descriptor,
+		"enumerable": descriptor.enumerable,
+		"configurable": descriptor.configurable,
+		"writable": descriptor.writable,
+		"get": descriptor.get,
+		"set": descriptor.set,
 
-	if( !kein( entity, property ) ){
-		return { };
-	}
+		"value": value
+	}, this );
 
-	let descriptor = Object.getOwnPropertyDescriptor( entity, property );
-
-	if( falzy( descriptor ) ){
-		return { };
-	}
-
-	let value = descriptor.value;
-
-	let name = wichevr( entity.name, entity.constructor.name );
-
-	return Meta( name, entity, property, descriptor, value );
+	return this;
 };
 
-module.exports = meto;
+Meta.prototype.toJSON = function toJSON( ){
+	return {
+		"name": this.name,
+		"entity": this.entity,
+
+		"property": this.property,
+		"type": this.type,
+
+		"descriptor": this.descriptor,
+		"enumerable": this.enumerable,
+		"configurable": this.configurable,
+		"writable": this.writable,
+		"get": this.get,
+		"set": this.set,
+
+		"value": this.value
+	};
+};
+
+module.exports = Meta;

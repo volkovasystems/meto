@@ -1,7 +1,9 @@
 yarn add \
 babel-runtime \
 cemento \
+diatom \
 falzy \
+kein \
 protype \
 wichevr \
 zelf \
@@ -16,7 +18,9 @@ webpack \
 --dev && \
 bower install \
 cemento \
+diatom \
 falzy \
+kein \
 protype \
 wichevr \
 zelf \

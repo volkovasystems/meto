@@ -57,50 +57,47 @@
                                                                                                                                                                                                                                                                                                   	@end-include
                                                                                                                                                                                                                                                                                                   */
 
-var cemento = require("cemento");
 var falzy = require("falzy");
+var kein = require("kein");
 var protype = require("protype");
 var wichevr = require("wichevr");
 var zelf = require("zelf");
+
+var Meta = require('./meta.js');
 
 var meto = function meto(property, entity) {
 	/*;
                                             	@meta-configuration:
                                             		{
-                                            			"property:required": "string",
+                                            			"property:required": [
+                                            				"string"
+                                            			],
                                             			"entity:required": "object"
                                             		}
                                             	@end-meta-configuration
                                             */
 
-	if (falzy(property) || !protype(property, STRING)) {
+	if (falzy(property) || !protype(property, NUMBER + STRING + SYMBOL)) {
 		throw new Error("invalid property");
 	}
 
 	entity = wichevr(entity, zelf(this));
 
-	var name = wichevr(entity.name, entity.constructor.name);
+	if (!kein(entity, property)) {
+		return {};
+	}
 
 	var descriptor = (0, _getOwnPropertyDescriptor2.default)(entity, property);
 
+	if (falzy(descriptor)) {
+		return {};
+	}
+
 	var value = descriptor.value;
 
-	return cemento({
-		"name": name,
-		"entity": entity,
+	var name = wichevr(entity.name, entity.constructor.name);
 
-		"property": property,
-		"type": protype(value).type,
-
-		"descriptor": descriptor,
-		"enumerable": descriptor.enumerable,
-		"configurable": descriptor.configurable,
-		"writable": descriptor.writable,
-		"get": descriptor.get,
-		"set": descriptor.set,
-
-		"value": value });
-
+	return Meta(name, entity, property, descriptor, value);
 };
 
 module.exports = meto;
