@@ -72,7 +72,7 @@ var meto = function meto(property, entity) {
                                             			"property:required": [
                                             				"string"
                                             			],
-                                            			"entity:required": "object"
+                                            			"entity:required": "*"
                                             		}
                                             	@end-meta-configuration
                                             */
@@ -83,7 +83,7 @@ var meto = function meto(property, entity) {
 
 	entity = wichevr(entity, zelf(this));
 
-	if (!kein(entity, property)) {
+	if (!kein(property, entity)) {
 		return {};
 	}
 

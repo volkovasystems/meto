@@ -62,6 +62,15 @@ const protype = require( "protype" );
 const Meta = diatom( "Meta" );
 
 Meta.prototype.initialize = function initialize( name, entity, property, descriptor, value ){
+	/*;
+		@meta-configuration:
+			{
+				"name:required": "string",
+				"entity:required": "*"
+			}
+		@end-meta-configuration
+	*/
+
 	cemento( {
 		"name": name,
 		"entity": entity,
