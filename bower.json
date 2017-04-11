@@ -1,6 +1,6 @@
 {
   "name": "meto",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "description": "Standard conventional object meta description.",
   "main": "meto.deploy.js",
   "support": "meto.support.js",
@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "cemento": "^0.15.0",
-    "diatom": "^0.19.0",
+    "diatom": "^0.20.0",
     "falzy": "^0.17.0",
     "kein": "^0.16.0",
     "protype": "^0.21.0",
