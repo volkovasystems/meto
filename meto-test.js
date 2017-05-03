@@ -1,7 +1,10 @@
 "use strict";
 
+const assert = require( "assert" );
 const meto = require( "./meto.js" );
 
-console.log( JSON.stringify( meto( "name", { "name": "simple" } ) ) );
+assert.ok( JSON.stringify( meto( "name", { "name": "simple" } ) ) );
 
-console.log( Object.isFrozen( meto( "name", { "name": "simple" } ) ) );
+assert.ok( Object.isFrozen( meto( "name", { "name": "simple" } ) ) );
+
+console.log( "ok" );
