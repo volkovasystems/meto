@@ -1,8 +1,28 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./meto.deploy.js">
-		</script>
+		<title>meto unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./meto.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "meto unit test", function( assert ) {
+
+				assert.ok( JSON.stringify( meto( "name", { "name": "simple" } ) ) );
+
+				assert.equal( Object.isFrozen( meto( "name", { "name": "simple" } ) ), true, "should return true" );
+				
+			} );
+		</script>
+	</body>
 </html>
