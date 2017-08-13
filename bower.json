@@ -1,6 +1,6 @@
 {
   "name": "meto",
-  "version": "0.29.0",
+  "version": "0.30.0",
   "description": "Standard conventional object meta description.",
   "main": "meto.deploy.js",
   "support": "meto.support.js",
@@ -25,12 +25,12 @@
     "tests"
   ],
   "dependencies": {
-    "cemento": "^0.16.0",
-    "diatom": "^0.32.0",
-    "falzy": "^0.20.0",
-    "kein": "^0.26.0",
-    "protype": "^0.22.0",
-    "wichevr": "^0.10.0",
-    "zelf": "^0.12.0"
+    "cemento": "^0.17.0",
+    "diatom": "^0.34.0",
+    "falzy": "^0.23.0",
+    "kein": "^0.30.0",
+    "protype": "^0.24.0",
+    "wichevr": "^0.14.0",
+    "zelf": "^0.14.0"
   }
 }
