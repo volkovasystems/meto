@@ -1,36 +1,27 @@
 {
-  "name": "meto",
-  "version": "0.30.0",
-  "description": "Standard conventional object meta description.",
-  "main": "meto.deploy.js",
-  "support": "meto.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "object",
-    "meta",
-    "description",
-    "meto"
-  ],
-  "homepage": "https://github.com/volkovasystems/meto",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "cemento": "^0.17.0",
-    "diatom": "^0.34.0",
-    "falzy": "^0.23.0",
-    "kein": "^0.30.0",
-    "protype": "^0.24.0",
-    "wichevr": "^0.14.0",
-    "zelf": "^0.14.0"
-  }
+	"name": "meto",
+	"version": "0.30.0",
+	"description": "Standard conventional object meta description.",
+	"main": "meto.deploy.js",
+	"support": "meto.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"object",
+		"meta",
+		"description",
+		"meto"
+	],
+	"homepage": "https://github.com/volkovasystems/meto",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
