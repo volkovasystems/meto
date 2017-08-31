@@ -1,0 +1,180 @@
+{
+	"state": {
+		"passed": 4,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-31T04:48:56.908Z",
+	"end": "2017-08-31T04:49:37.785Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "meto",
+			"duration": 0,
+			"start": "2017-08-31T04:49:37.212Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "meto",
+			"duration": 393,
+			"start": "2017-08-31T04:49:37.213Z",
+			"end": "2017-08-31T04:49:37.606Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-31T04:49:37.214Z",
+					"end": "2017-08-31T04:49:37.215Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "meto",
+					"associatedTest": "should freeze the object"
+				},
+				{
+					"start": "2017-08-31T04:49:37.408Z",
+					"end": "2017-08-31T04:49:37.408Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "meto",
+					"associatedTest": "should freeze the object"
+				},
+				{
+					"start": "2017-08-31T04:49:37.409Z",
+					"end": "2017-08-31T04:49:37.410Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "meto",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-31T04:49:37.478Z",
+					"end": "2017-08-31T04:49:37.478Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "meto",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-31T04:49:37.478Z",
+					"end": "2017-08-31T04:49:37.479Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "meto",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-31T04:49:37.543Z",
+					"end": "2017-08-31T04:49:37.543Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "meto",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-31T04:49:37.544Z",
+					"end": "2017-08-31T04:49:37.544Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "meto",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-31T04:49:37.606Z",
+					"end": "2017-08-31T04:49:37.606Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "meto",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-31T04:49:37.606Z",
+					"end": "2017-08-31T04:49:37.607Z",
+					"duration": 1,
+					"title": "\"after all\" hook",
+					"associatedSuite": "meto"
+				}
+			]
+		},
+		{
+			"name": "`meto( 'name', { 'name': 'simple' } )`",
+			"duration": 195,
+			"start": "2017-08-31T04:49:37.214Z",
+			"end": "2017-08-31T04:49:37.409Z",
+			"tests": [
+				{
+					"name": "should freeze the object",
+					"start": "2017-08-31T04:49:37.214Z",
+					"end": "2017-08-31T04:49:37.408Z",
+					"duration": 194,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`Property descriptor configurable`",
+			"duration": 69,
+			"start": "2017-08-31T04:49:37.409Z",
+			"end": "2017-08-31T04:49:37.478Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-31T04:49:37.409Z",
+					"end": "2017-08-31T04:49:37.477Z",
+					"duration": 68,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`Property descriptor enumerable`",
+			"duration": 65,
+			"start": "2017-08-31T04:49:37.478Z",
+			"end": "2017-08-31T04:49:37.543Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-31T04:49:37.478Z",
+					"end": "2017-08-31T04:49:37.543Z",
+					"duration": 65,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`Property descriptor writable`",
+			"duration": 63,
+			"start": "2017-08-31T04:49:37.543Z",
+			"end": "2017-08-31T04:49:37.606Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-31T04:49:37.543Z",
+					"end": "2017-08-31T04:49:37.606Z",
+					"duration": 63,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

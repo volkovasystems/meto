@@ -66,6 +66,30 @@ const meto = require( "./meto.js" );
 
 describe( "meto", ( ) => {
 
+	describe( "`meto( 'name', { 'name': 'simple' } )`", ( ) => {
+		it( "should freeze the object", ( ) => {
+			assert.equal( Object.isFrozen( meto( "name", { "name": "simple" } ) ), true );
+		} );
+	} );
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( meto( "name", { "name": "simple" } ).configurable, true );
+		} );
+	} );
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( meto( "name", { "name": "simple" } ).enumerable, true );
+		} );
+	} );
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( meto( "name", { "name": "simple" } ).writable, true );
+		} );
+	} );
+
 } );
 
 //: @end-server

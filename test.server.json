@@ -1,16 +1,74 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-29T05:25:11.889Z",
-    "end": "2017-08-29T05:25:11.890Z",
-    "duration": 1
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 5,
+		"tests": 4,
+		"passes": 4,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-31T04:48:55.565Z",
+		"end": "2017-08-31T04:48:55.573Z",
+		"duration": 8
+	},
+	"tests": [
+		{
+			"title": "should freeze the object",
+			"fullTitle": "meto `meto( 'name', { 'name': 'simple' } )` should freeze the object",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "meto `Property descriptor configurable` should be equal to true",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "meto `Property descriptor enumerable` should be equal to true",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "meto `Property descriptor writable` should be equal to true",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should freeze the object",
+			"fullTitle": "meto `meto( 'name', { 'name': 'simple' } )` should freeze the object",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "meto `Property descriptor configurable` should be equal to true",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "meto `Property descriptor enumerable` should be equal to true",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "meto `Property descriptor writable` should be equal to true",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

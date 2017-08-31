@@ -70,6 +70,30 @@ const path = require( "path" );
 
 describe( "meto", ( ) => {
 
+	describe( "`meto( 'name', { 'name': 'simple' } )`", ( ) => {
+		it( "should freeze the object", ( ) => {
+			assert.equal( Object.isFrozen( meto( "name", { "name": "simple" } ) ), true );
+		} );
+	} );
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( meto( "name", { "name": "simple" } ).configurable, true );
+		} );
+	} );
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( meto( "name", { "name": "simple" } ).enumerable, true );
+		} );
+	} );
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( meto( "name", { "name": "simple" } ).writable, true );
+		} );
+	} );
+
 } );
 
 //: @end-server
@@ -78,6 +102,31 @@ describe( "meto", ( ) => {
 //: @client:
 
 describe( "meto", ( ) => {
+
+	describe( "`meto( 'name', { 'name': 'simple' } )`", ( ) => {
+		it( "should freeze the object", ( ) => {
+			assert.equal( Object.isFrozen( meto( "name", { "name": "simple" } ) ), true );
+		} );
+	} );
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( meto( "name", { "name": "simple" } ).configurable, true );
+		} );
+	} );
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( meto( "name", { "name": "simple" } ).enumerable, true );
+		} );
+	} );
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( meto( "name", { "name": "simple" } ).writable, true );
+		} );
+	} );
+
 } );
 
 //: @end-client
@@ -86,6 +135,73 @@ describe( "meto", ( ) => {
 //: @bridge:
 
 describe( "meto", ( ) => {
+
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`meto( 'name', { 'name': 'simple' } )`", ( ) => {
+		it( "should freeze the object", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return Object.isFrozen( meto( "name", { "name": "simple" } ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, true );
+
+		} );
+	} );
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return meto( "name", { "name": "simple" } ).configurable;
+				}
+
+			).value;
+
+			assert.equal( result, true );
+
+		} );
+	} );
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return meto( "name", { "name": "simple" } ).enumerable;
+				}
+
+			).value;
+
+			assert.equal( result, true );
+
+		} );
+	} );
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return meto( "name", { "name": "simple" } ).writable;
+				}
+
+			).value;
+
+			assert.equal( result, true );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge

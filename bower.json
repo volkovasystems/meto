@@ -23,5 +23,14 @@
 		"bower_components",
 		"test",
 		"tests"
-	]
+	],
+	"dependencies": {
+		"cemento": "^0.17.0",
+		"diatom": "^0.34.0",
+		"falzy": "^0.23.0",
+		"kein": "^0.30.0",
+		"protype": "^0.24.0",
+		"wichevr": "^0.14.0",
+		"zelf": "^0.14.0"
+	}
 }
